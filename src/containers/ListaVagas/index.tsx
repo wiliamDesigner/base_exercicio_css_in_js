@@ -3,7 +3,9 @@ import FormVagas from '../../components/FormVagas'
 
 import Vaga from '../../components/Vaga'
 
-import styles from './ListaVagas.module.css'
+import styled from 'styled-components'
+
+import { HTMLAttributes } from 'react'
 
 type Vaga = {
   id: string
@@ -97,9 +99,9 @@ const ListaVagas = () => {
   )
 
   return (
-    <div>
+    <StyledDivVaga>
       <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
-      <ul className={styles.vagas}>
+      <>
         {vagasFiltradas.map((vag) => (
           <Vaga
             key={vag.id}
@@ -112,9 +114,22 @@ const ListaVagas = () => {
             requisitos={vag.requisitos}
           />
         ))}
-      </ul>
-    </div>
+      </>
+    </StyledDivVaga>
   )
 }
+
+const StyledDivVaga = styled.div<HTMLAttributes<HTMLDivElement>>`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 32px;
+  @media (max-width: 768px) {
+    .vagas {
+      grid-template-columns: 1fr;
+    }
+  }
+`
 
 export default ListaVagas
