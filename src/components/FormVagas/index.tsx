@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react'
 import styled from 'styled-components'
+
 import {
   InputHTMLAttributes,
   ButtonHTMLAttributes,
@@ -31,33 +32,27 @@ const FormVagas = ({ aoPesquisar }: Props) => {
 }
 
 const StyledForm = styled.form<FormHTMLAttributes<HTMLFormElement>>`
-  display: flex;
-  gap: 8px;
-  background-color: #f8f9fa;
+  display: grid;
+  grid-template-columns: 1fr auto;
   padding: 16px;
   border-radius: 8px;
+  background-color: var(--cor-secundaria);
 `
-
 const StyledInput = styled.input<InputHTMLAttributes<HTMLInputElement>>`
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
+  flex: auto;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   font-size: 16px;
 `
 
 const StyledButton = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
-  background-color: #007bff;
-  color: white;
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 `
 
 export default FormVagas

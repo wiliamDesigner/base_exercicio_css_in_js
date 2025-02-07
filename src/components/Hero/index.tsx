@@ -33,6 +33,15 @@ const StyledHeroForm = styled.form`
   @media (max-width: 768px) {
     height: auto;
     padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -41,6 +50,12 @@ const StyledHeroText = styled.div`
   color: #eee;
   font-family: Gloock, serif;
   font-size: 48px;
-`
+  text-align: center;
 
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`
 export default Hero
