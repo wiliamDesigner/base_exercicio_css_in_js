@@ -33,11 +33,7 @@ const StyledHeroForm = styled.form`
   @media (max-width: 768px) {
     height: auto;
     padding: 24px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
   @media (max-width: 425px) {
     display: flex;
     justify-content: center;

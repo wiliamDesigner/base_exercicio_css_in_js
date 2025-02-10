@@ -27,7 +27,7 @@ const Vaga = (props: Props) => (
 )
 
 const StyledVaga = styled.li<LiHTMLAttributes<HTMLLIElement>>`
-  border: 1px solid var(--cor-principal);
+  border: 1px solid var(--cor-principal); //criar um div
   background-color: var(--cor-primaria);
   color: var(--cor-principal);
   padding: 16px;
@@ -36,6 +36,10 @@ const StyledVaga = styled.li<LiHTMLAttributes<HTMLLIElement>>`
   &:hover {
     background-color: var(--cor-secundaria);
     color: var(--cor-principal);
+  }
+
+  @media (max-width: 768px) {
+    display: block;
   }
 `
 const StyledVagaTitulo = styled.h3<React.HTMLAttributes<HTMLHeadingElement>>`
@@ -53,9 +57,6 @@ const StyledFormulario = styled.ul<React.HTMLAttributes<HTMLUListElement>>`
   border-radius: 8px;
   text-align: left;
   margin-bottom: 25px;
-  @media (max-width: 768px) {
-    display: block;
-  }
 
   &:hover {
     border-color: var(--cor-primaria);
@@ -80,10 +81,6 @@ const StyledFormularioa = styled.a<React.HTMLAttributes<HTMLAnchorElement>>`
     border-color: var(--cor-secundaria);
     background-color: var(--cor-secundaria);
     color: var(--cor-principal);
-  }
-
-  @media (max-width: 768px) {
-    display: block;
   }
 `
 export default Vaga

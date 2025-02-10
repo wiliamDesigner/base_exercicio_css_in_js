@@ -40,7 +40,7 @@ const StyledForm = styled.form<FormHTMLAttributes<HTMLFormElement>>`
 `
 const StyledInput = styled.input<InputHTMLAttributes<HTMLInputElement>>`
   flex: auto;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--cor-principal);
   border-radius: 4px;
   font-size: 16px;
 `
